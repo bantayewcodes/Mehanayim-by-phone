@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>መሃናይም ቅኔ — መዘምራን</title>
+<meta name="description" content="መሃናይም ቅኔ የቤተክርስቲያን መዘምራን ኦፊሴላዊ ድረ-ገጽ">
+
+<!-- Fonts: Noto Sans Ethiopic for Amharic, Poppins for Latin/utility text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================= APP LOADER ============================= -->
+<div class="app-loader" id="appLoader">
+    <div class="app-loader-content">
+
+        <img
+            src="assets/photos/mehanayim-100.webp"
+            alt="መሃናይም ቅኔ"
+            class="app-loader-logo"
+        >
+
+        <div class="app-loader-spinner"></div>
+
+        <h2>መሃናይም ቅኔ</h2>
+        <p>መዘምራን</p>
+
+    </div>
+</div>
+
+<!-- ============ SVG ICON SPRITE (inline, no external icon library needed) ============ -->
+<svg style="display:none">
+  <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></symbol>
+  <symbol
+    id="icon-previous"
+    viewBox="0 0 24 24"
+>
+    <path d="M6 5h2v14H6zm3 7 9-7v14z"/>
+</symbol>
+
+<symbol
+    id="icon-next"
+    viewBox="0 0 24 24"
+>
+    <path d="M16 5h2v14h-2zM6 5l9 7-9 7z"/>
+</symbol>
+  <symbol id="icon-sun" viewBox="0 0 24 24"><path d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1zm0 15a1 1 0 0 1 1 1V22a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1zM4.22 5.64a1 1 0 0 1-1.41 0L1.7 4.53a1 1 0 1 1 1.41-1.41l1.11 1.1a1 1 0 0 1 0 1.42zm14.14 14.14a1 1 0 0 1-1.41 0l-1.11-1.1a1 1 0 1 1 1.41-1.42l1.11 1.11a1 1 0 0 1 0 1.41zM2 13H.5a1 1 0 1 1 0-2H2a1 1 0 1 1 0 2zm21.5 0H22a1 1 0 1 1 0-2h1.5a1 1 0 1 1 0 2zM4.22 18.36a1 1 0 0 1 0-1.41l1.11-1.11a1 1 0 1 1 1.41 1.41l-1.1 1.11a1 1 0 0 1-1.42 0zM17.25 5.64a1 1 0 0 1 0-1.42l1.11-1.1a1 1 0 1 1 1.41 1.41l-1.11 1.11a1 1 0 0 1-1.41 0zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.7 14.9A8.5 8.5 0 0 1 9.1 3.3a.8.8 0 0 0-1-1A10 10 0 1 0 21.7 15.9a.8.8 0 0 0-1-1z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24"><path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.89 18.3 9.19 12 2.89 5.71 4.3 4.3l6.29 6.3 6.29-6.3z"/></symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></symbol>
+  <symbol id="icon-download" viewBox="0 0 24 24"><path d="M5 20h14v-2H5zM13 4h-2v9.17l-3.58-3.59L6 11l6 6 6-6-1.42-1.42L13 13.17z"/></symbol>
+  <symbol id="icon-volume" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10zm13.5 2A4.5 4.5 0 0 0 14 7.97v8.05A4.5 4.5 0 0 0 16.5 12z"/></symbol>
+  <symbol id="icon-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5h-2V6.41l-4.29 4.3-1.42-1.42L17.59 5H16V3zM4 5h3.59l10.7 10.7L20 13.99V19h-5v-2h1.59L6.59 7H4V5zm0 14v-2h2.59l3.7-3.7 1.42 1.42L7.41 19H4z"/></symbol>
+  <symbol id="icon-repeat" viewBox="0 0 24 24"><path d="M7 7h10V4l4 4-4 4V9H7a3 3 0 0 0-3 3v1H2v-1a5 5 0 0 1 5-5zm10 10H7v3l-4-4 4-4v3h10a3 3 0 0 0 3-3v-1h2v1a5 5 0 0 1-5 5z"/></symbol>
+  <symbol id="icon-list" viewBox="0 0 24 24"><path d="M4 5h2v2H4V5zm4 0h12v2H8V5zm-4 6h2v2H4v-2zm4 0h12v2H8v-2zm-4 6h2v2H4v-2zm4 0h12v2H8v-2z"/></symbol>
+  <symbol id="icon-copy" viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></symbol>
+  <symbol id="icon-note" viewBox="0 0 24 24"><path d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3z"/></symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="M9.29 6.71 14.59 12l-5.3 5.29 1.41 1.42L17.41 12 10.7 5.29z"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 10.41 4.24 4.24-1.41 1.41L11 13V6h2z"/></symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14z"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24">
+    <path
+        d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.8 21 3 12.2 3 1.8c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.2 1.1L6.6 8.8c-.3.3-.3.7 0 1.1Z"
+    />
+</symbol>
+<symbol id="icon-mail" viewBox="0 0 24 24">
+    <path
+        d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1Zm0 2v.3l9 6.2 9-6.2V7l-9 6.2L3 7Zm0 10h18V9.7l-8.4 5.8a1 1 0 0 1-1.1 0L3 9.7V17Z"
+    />
+</symbol>
+</svg>
+
+<!-- ============================= HEADER / NAVIGATION ============================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <!-- Dual identity: church placeholder + choir logo, see section 2 of brief -->
+    <a href="#home" class="brand-block">
+      <!-- REPLACE: church logo placeholder image path below -->
+      <img src="assets/photos/mehanayim-101.webp" alt="የቤተክርስቲያን ሎጎ" class="church-logo-placeholder" onerror="this.classList.add('img-fallback')">
+      <div class="brand-names">
+        <span class="church-name">ሀዋሳ ታቦር ቃለ ሕይወት ቤተክርስቲያን</span>
+        <span class="choir-name-sub">መሃናይም ቅኔ መዘምራን</span>
+      </div>
+    </a>
+
+    <a href="#home" class="choir-logo-link" aria-label="ወደ መነሻ ገጽ">
+      <img src="assets/photos/mehanayim-100.webp" alt="መሃናይም ቅኔ ሎጎ" class="choir-logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#home" class="nav-link active">መነሻ</a></li>
+        <li><a href="#about" class="nav-link">ስለ እኛ</a></li>
+        <li><a href="#songs" class="nav-link">መዝሙር</a></li>
+        <li><a href="#gallery" class="nav-link">ፎቶዎች</a></li>
+        <li><a href="#rules" class="nav-link">ደንብ</a></li>
+        <li><a href="#contact" class="nav-link">ያግኙን</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="ጨለማ ሁነታ አብራ / አጥፋ"
+        title="ጨለማ / ብርሃን ሁነታ"
+      >
+        <svg class="icon icon-sun-show" aria-hidden="true"><use href="#icon-sun"></use></svg>
+        <svg class="icon icon-moon-show" aria-hidden="true"><use href="#icon-moon"></use></svg>
+      </button>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="ማውጫ ክፈት" aria-expanded="false">
+        <svg class="icon"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-head">
+      <img src="assets/photos/mehanayim-100.webp" alt="ሎጎ" class="mobile-drawer-logo">
+      <button class="drawer-close" id="drawerClose" aria-label="ዝጋ">
+        <svg class="icon"><use href="#icon-close"/></svg>
+      </button>
+    </div>
+    <ul>
+      <li><a href="#home" class="nav-link">መነሻ</a></li>
+      <li><a href="#about" class="nav-link">ስለ እኛ</a></li>
+      <li><a href="#songs" class="nav-link">መዝሙር</a></li>
+      <li><a href="#gallery" class="nav-link">ፎቶዎች</a></li>
+      <li><a href="#rules" class="nav-link">ደንብ</a></li>
+      <li><a href="#contact" class="nav-link">ያግኙን</a></li>
+    </ul>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+</header>
+
+<!-- ============================= MINI AUDIO CONTROLLER ============================= -->
+
+<div
+  class="audio-controller"
+  id="audioController"
+  aria-hidden="true"
+>
+
+  <div class="audio-controller-inner">
+
+    <img
+      src=""
+      alt=""
+      class="audio-controller-cover"
+      id="audioControllerCover"
+    >
+
+    <div class="audio-controller-info">
+
+      <p
+        class="audio-controller-title"
+        id="audioControllerTitle"
+      >
+        —
+      </p>
+
+      <div class="audio-controller-progress">
+        <div
+          class="audio-controller-progress-fill"
+          id="audioControllerProgress"
+        ></div>
+      </div>
+
+    </div>
+
+
+    <button
+      class="audio-controller-play"
+      id="audioControllerPlay"
+      aria-label="አጫውት / አቁም"
+    >
+      <svg class="icon">
+        <use href="#icon-play"></use>
+      </svg>
+    </button>
+
+
+    <button
+      class="audio-controller-open"
+      id="audioControllerOpen"
+      aria-label="ሙሉ ማጫወቻ ክፈት"
+    >
+      <svg class="icon">
+        <use href="#icon-chevron"></use>
+      </svg>
+    </button>
+
+  </div>
+
+</div>
+
+<main>
+
+<!-- ============================= HERO / መነሻ ============================= -->
+<section id="home" class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-glow glow-blue"></div>
+    <div class="hero-glow glow-gold"></div>
+
+    <div class="floating-notes" aria-hidden="true">
+      <svg class="fn fn-1" viewBox="0 0 24 24"><use href="#icon-note"/></svg>
+      <svg class="fn fn-2" viewBox="0 0 24 24"><use href="#icon-note"/></svg>
+      <svg class="fn fn-3" viewBox="0 0 24 24"><use href="#icon-note"/></svg>
+    </div>
+  </div>
+
+  <div class="hero-content fade-in-up">
+    <img src="assets/photos/mehanayim-100.webp" alt="መሃናይም ቅኔ ሎጎ" class="hero-logo">
+    <p class="hero-eyebrow">የቤተክርስቲያን መዘምራን</p>
+    <h1 class="hero-title">በመዝሙር እና በአምልኮ<br><span>እግዚአብሔርን እናገለግላለን</span></h1>
+    <p class="hero-sub">ድምጻችንን፣ ልባችንን እና ጊዜያችንን ለልዑል እግዚአብሔር ክብር በማቅረብ፣ በቅዱስ መዝሙር አገልግሎት አንድነታችንን እንገልጻለን።</p>
+    <div class="hero-actions">
+      <a href="#songs" class="btn btn-primary">
+        <svg class="icon icon-sm"><use href="#icon-play"/></svg>
+        መዝሙሮቻችንን ያዳምጡ
+      </a>
+      <a href="#about" class="btn btn-outline">ስለ እኛ ይወቁ</a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-hidden="true"><span></span></a>
+</section>
+
+<!-- BACK TO TOP BUTTON -->
+<button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="ወደ ላይ ተመለስ"
+    title="ወደ ላይ ተመለስ"
+>
+    ↑
+</button>
+
+<!-- ============================= ABOUT / ስለ እኛ ============================= -->
+<section id="about" class="section about-section">
+  <div class="section-inner">
+    <div class="about-grid">
+
+      <div class="about-media reveal">
+        <div class="about-photo-frame">
+          <!-- REPLACE: choir group photo -->
+          <img src="assets/photos/mehanayim-123.webp" alt="የመዘምራን ቡድን ፎቶ" class="about-photo" onerror="this.parentElement.classList.add('img-placeholder')">
+          <div class="img-placeholder-label">[የመዘምራን ቡድን ፎቶ እዚህ ይገባል]</div>
+        </div>
+        <div class="about-photo-accent"></div>
+      </div>
+
+      <div class="about-text reveal">
+        <p class="eyebrow">ስለ እኛ</p>
+        <h2 class="section-title">መሃናይም ቅኔ መዘምራን</h2>
+        <p class="about-lead">
+          መሃናይም ቅኔ የመዘምራን ህብረት በ 2010 ዓ.ም. የተመሰረተ ሲሆን፣ ከ ሀዋሳ ታቦር ቃለ ሕይወት ቤተክርስቲያን ስር በመሆን የእግዚአብሔርን ቃል በዜማ የማዳረስ አገልግሎት ሲሰጥ ቆይቷል...
+
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <h3>የእኛ ተልዕኮ</h3>
+            <p>በመንፈሳዊ መዝሙር በጸጋው አማካኝነት ነፍሳትን ወደ እግዚአብሔር ማቅረብ።</p>
+          </div>
+          <div class="pillar-card">
+            <h3>ራዕያችን</h3>
+            <p>በትውልዶች መካከል የመንፈሳዊ ዜማ ቅርስን ማስተላለፍ።</p>
+          </div>
+          <div class="pillar-card">
+            <h3>የአገልግሎት ዓላማ</h3>
+            <p>እግዚአብሔርን ከፍ ማድረግ።<br>በአምልኮ ጊዜ ማህበረሰቡን በዜማ ማነጽ።</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SONGS / መዝሙር ============================= -->
+<section id="songs" class="section songs-section">
+  <div class="section-inner">
+
+    <p class="eyebrow">መዝሙር</p>
+
+    <div class="songs-layout">
+
+      <!-- LEFT / INTRO -->
+      <aside class="songs-sidebar">
+
+        <h2 class="section-title">
+          የመዘምራኑ<br>
+          መዝሙሮች
+        </h2>
+
+        <p class="section-sub">
+          ከዚህ በታች ያሉትን መንፈሳዊ መዝሙሮች
+          ያዳምጡ፣ ግጥማቸውን ይመልከቱ እና
+          ነፍስዎን ያድሱ።
+        </p>
+
+        <div class="songs-sidebar-note">
+          <span>♪</span>
+          <p>ያዳምጡ፣ ያመልኩ፣ ይታደሱ!</p>
+        </div>
+
+      </aside>
+
+
+      <!-- RIGHT / SONGS -->
+      <div class="songs-content">
+
+        <!-- Search + category filters -->
+        <div class="songs-controls reveal">
+
+          <div class="search-box">
+            <svg class="icon icon-sm">
+              <use href="#icon-search"/>
+            </svg>
+
+            <input
+              type="text"
+              id="songSearch"
+              placeholder="መዝሙር ይፈልጉ..."
+            >
+          </div>
+
+          <div
+            class="category-filters"
+            id="categoryFilters"
+          >
+            <button
+              class="chip active"
+              data-category="ሁሉም"
+            >
+              ሁሉም
+            </button>
+
+            <button
+              class="chip"
+              data-category="የምስጋና"
+            >
+              የምስጋና
+            </button>
+
+            <button
+              class="chip"
+              data-category="የበዓል"
+            >
+              የበዓል
+            </button>
+
+            <button
+              class="chip"
+              data-category="ታላቅነቱ"
+            >
+              ታላቅነቱ
+            </button>
+
+            <button
+              class="chip"
+              data-category="ማራናታ"
+            >
+              ማራናታ
+            </button>
+
+            <button
+              class="chip"
+              data-category="Favorite"
+            >
+              Favorite
+            </button>
+          </div>
+
+        </div>
+
+
+        <!-- SCROLLABLE SONG AREA -->
+        <div class="songs-scroll-area">
+
+          <!-- Song cards injected by script.js -->
+          <div
+            class="songs-grid"
+            id="songsGrid"
+          ></div>
+
+          <p
+            class="no-results"
+            id="noSongsMsg"
+            hidden
+          >
+            ምንም መዝሙር አልተገኘም።
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================= GALLERY / ፎቶዎች ============================= -->
+<section id="gallery" class="section gallery-section">
+  <div class="section-inner">
+    <p class="eyebrow center">ፎቶዎች</p>
+    <h2 class="section-title center">የ ህብረቱ ፎቶዎች</h2>
+    <p class="section-sub center">በ ምህረቱ ስናገለግለዉ</p>
+
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="chip active" data-gcat="ሁሉም">ሁሉም</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+    <!-- የአምልኮ ጊዜ -->
+    <article class="gallery-album"
+        data-gallery-category="worship">
+
+        <div class="gallery-album-image">
+            <img
+                src="assets/photos/mehanayim-206.webp"
+                alt="የአምልኮ ጊዜ">
+        </div>
+
+        <div class="gallery-album-info">
+            <span class="gallery-album-category">የአምልኮ ጊዜ</span>
+            <h3>የአምልኮ ጊዜ</h3>
+            <p>ሁሉንም ፎቶዎች ይመልከቱ</p>
+        </div>
+
+    </article>
+
+
+    <!-- የመዘምራን ሕይወት -->
+    <article class="gallery-album"
+        data-gallery-category="choir">
+
+        <div class="gallery-album-image">
+            <img
+                src="assets/photos/mehanayim-104.webp"
+                alt="የመዘምራን ሕይወት">
+        </div>
+
+        <div class="gallery-album-info">
+            <span class="gallery-album-category">የመዘምራን ህይወት</span>
+            <h3>የአንድነት ጊዜ</h3>
+            <p>ሁሉንም ፎቶዎች ይመልከቱ</p>
+        </div>
+
+    </article>
+
+</div>
+
+  </div>
+</section>
+
+<!-- ============================= RULES / ደንብ ============================= -->
+<section id="rules" class="section rules-section">
+  <div class="section-inner">
+
+    <p class="eyebrow">ደንብ</p>
+
+    <div class="rules-layout">
+
+      <!-- LEFT STICKY SIDEBAR -->
+      <aside class="rules-sidebar">
+
+        <h2 class="section-title">
+          የህብረቱ መተዳደሪያ<br>
+          ደንቦች
+        </h2>
+
+        <p class="section-sub">
+          የሀዋሳ ታቦር ቃለ ህይወት ቤተክርስቲያን
+          የመሃናይም ቅኔ ኳየር የጋራ ስምምነት።
+        </p>
+
+        <nav class="rules-nav">
+
+          <a href="#rule-01">01</a>
+          <a href="#rule-02">02</a>
+          <a href="#rule-03">03</a>
+          <a href="#rule-04">04</a>
+          <a href="#rule-05">05</a>
+          <a href="#rule-06">06</a>
+          <a href="#rule-07">07</a>
+          <a href="#rule-08">08</a>
+          <a href="#rule-09">09</a>
+
+        </nav>
+
+      </aside>
+
+
+      <!-- RIGHT CONTENT -->
+      <div class="rules-content">
+
+
+        <!-- ARTICLE 1 -->
+        <article class="rule-block" id="rule-01">
+
+          <span class="rule-index">01</span>
+
+          <h3>የመደበኛ ፕሮግራም ውስጠ ደንብ</h3>
+
+          <ol>
+            <li>
+              የቅዳሜ መደበኛ ፕሮግራም የሚደረገው
+              ከ 8፡30-11፡00 ነው።
+            </li>
+
+            <li>
+              ፕሮግራም ተጀምሮ በተለያዩ ምክንያቶች
+              ለሚያረፉ 15 ደቂቃ አላቸው፣
+              ማለትም እስከ 8፡45።
+            </li>
+
+            <li>
+              ከ 8፡45 አምስት እስከ 9 ሰዓት ባለው ውስጥ
+              የሚመጡ አባላት ያረፈዱትን ደቂቃ
+              ያክል በርከት ይቀጣሉ።
+            </li>
+
+            <li>
+              ከ 9 ሰዓት በኋላ የሚመጡ አባላት
+              ከበድ ባለ ቅጣት ይቀጣሉ።
+            </li>
+
+            <li>
+              የተለያዩ ፈቃዶች ሲኖሩ በሰው ማስፈቀድ
+              አይቻልም፣ ማለትም ጉዳዩን ማስፈቀድ አለበት።
+            </li>
+
+            <li>
+              በየሳምንቱ የቲም መዋጮ 10 ብር አለ።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 2 -->
+        <article class="rule-block" id="rule-02">
+
+          <span class="rule-index">02</span>
+
+          <h3>የአገልግሎት ጊዜን በተመለከተ</h3>
+
+          <ol>
+            <li>
+              አንድ አባል ለአገልግሎት መቆም የሚችለው
+              መዝሙሮቹን ሙሉ በሙሉ ሲችል ነው።
+            </li>
+
+            <li>
+              በአገልግሎት ጊዜ ሴቶች ሱሪ መልበስ፣
+              ጸጉር መበተን፣ ትኩረት ሊስብ የሚችል
+              የውበት ማጉያ ከፊት፣ ከንፈር፣ ጆሮ እና
+              አንገት ላይ መጠቀም አይፈቀድም።
+            </li>
+
+            <li>
+              በግል ምክንያት አገልግሎት ማገልገል
+              የማይፈልግ አባል ወደ መሪዎች ቀርቦ
+              ማስፈቀድ አለበት።
+            </li>
+
+            <li>
+              ከአገልግሎት በኋላ ልብስ ሳንቀይር
+              በጋራ አመስግነን ነው የምንለያየው።
+            </li>
+
+            <li>
+              አንድ አገልግሎት ለማገልገል ጥናት
+              ከጀመርንበት ጊዜ ጀምሮ ቢያንስ ግማሹ
+              ጊዜ መገኘት አለበት።
+            </li>
+
+            <li>
+              አንድ አባል በየትኛውም ጊዜ አስፈቅዶ
+              ምክንያቱ ውሸት ሆኖ ቢገኝ በመሪዎች
+              እርምጃ ይወሰዳል።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 3 -->
+        <article class="rule-block" id="rule-03">
+
+          <span class="rule-index">03</span>
+
+          <h3>አዲስ መረጃን በተመለከተ</h3>
+
+          <ol>
+            <li>
+              የተነገረውን መረጃ በትክክል ማወቅ፣
+              ማረጋገጥ።
+            </li>
+
+            <li>
+              መረጃ የሰጠውን አካል ለይቶ ማወቅ፣
+              መረጃውን ከመረጃ ሰጪው ብቻ መስማት።
+            </li>
+
+            <li>
+              ስለ አንድ መረጃ መጠራር ካለ፣
+              መረጃ የሰጠውን አካል በግል በማግኘት
+              ስለመረጃው ማጣራት (አሉባልታ እንዳልሆነ)።
+            </li>
+
+            <li>
+              ጉዳዩን ካላመንንበት የራስ ምክር ወይም
+              አስተያየት መስጠት።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 4 -->
+        <article class="rule-block" id="rule-04">
+
+          <span class="rule-index">04</span>
+
+          <h3>ሥርዓትን በተመለከተ</h3>
+
+          <ol>
+            <li>
+              በጸሎትም ሆነ በጥናት ጊዜ እንዲሁም
+              በተለያዩ ፕሮግራሞች ጊዜ ፕሮግራሙን
+              እየመራ ያለውን ሰው ሳያስፈቅዱ መውጣት
+              አይቻልም።
+            </li>
+
+            <li>
+              በጥናትና በጸሎት ጊዜ ፕሮግራሙን
+              የማይመለከት ነገር ስልክ ላይ መጠቀም
+              አይፈቀድም።
+            </li>
+
+            <li>
+              አንድ አባል ፊት ለፊት ፕሮግራሙን
+              እየመራ ላለው ሰው ሙሉ ለሙሉ መታዘዝ
+              አለበት።
+            </li>
+
+            <li>
+              የመዝሙር ጥናት ጊዜ የማይዘምሩ፣
+              እንዲሁም በጸሎት ሰዓት የማይጸልዩ
+              ቁጭ ብለው የሚያዩ (የሚታዘቡ)
+              እንዲሮሩ አይፈቀድም።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 5 -->
+        <article class="rule-block" id="rule-05">
+
+          <span class="rule-index">05</span>
+
+          <h3>በውይይት ጊዜ</h3>
+
+          <ol>
+            <li>
+              ሁሉም አባል በውይይት ጊዜ መሳተፍ አለበት፣
+              አንድ ሃሳብ መደጋገም የለበትም።
+            </li>
+
+            <li>
+              ጥያቄው ማያወያይ ከሆነ መልሱ ወዲያው
+              መመለስ አለበት፣ እድል ሳይሰጥ ማውራት
+              አይቻልም።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 6 -->
+        <article class="rule-block" id="rule-06">
+
+          <span class="rule-index">06</span>
+
+          <h3>የቤተክርስቲያን ፕሮግራምን በተመለከተ</h3>
+
+          <ol>
+            <li>
+              አንድ የኳየር አባል የቤተክርስቲያንን
+              መደበኛ ፕሮግራም ሳይሳተፍ የኳየር
+              ፕሮግራም ላይ መሳተፍ አይችልም።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 7 -->
+        <article class="rule-block" id="rule-07">
+
+          <span class="rule-index">07</span>
+
+          <h3>የኳየርን ፕሮግራም በተመለከተ</h3>
+
+          <ol>
+            <li>
+              የምናገለግለው ትልቁን የእግዚአብሔርን
+              መንግስት እንደመሆኑ በታማኝነት
+              የኳየሪቷን ፕሮግራም በሚገባ
+              መከታተል አለበት/አለባት።
+            </li>
+
+            <li>
+              አዲስ ወደ ኳየር ተመድበው የሚቀላቀሉ
+              አባላት አገልግሎት ሳያገለግሉ ለ 2 ወር
+              ይቆያሉ።
+            </li>
+
+            <li>
+              በተለያዩ ምክንያቶች ለረጅም ጊዜ ከኳየር
+              ጠፍተው የነበሩ ልጆች ሲመለሱ
+              አገልግሎት ሳያገለግሉ 1 ወር ይቆያሉ።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 8 -->
+        <article class="rule-block" id="rule-08">
+
+          <span class="rule-index">08</span>
+
+          <h3>ወደ ሌላ ሀገር ለረጅም ጊዜ የሚሄዱትን በተመለከተ</h3>
+
+          <ol>
+            <li>
+              ከመሄዳቸው በፊት እንደሚሄዱ
+              ለመሪዎች ማሳወቅ፣ መምከር ያስፈልጋል።
+            </li>
+
+            <li>
+              ከረጅም ጊዜ በኋላ ሲመጡ እንደመጡ
+              አያገለግሉም፤ ለተወሰነ ጊዜ በህብረት ይቆያሉ።
+            </li>
+
+            <li>
+              ከዚህ የሄዱ ልጆች በኳየሩ ውስጥ
+              ስለሚደረጉ ነገሮች መሳተፍ አለባቸው።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- ARTICLE 9 -->
+        <article class="rule-block" id="rule-09">
+
+          <span class="rule-index">09</span>
+
+          <h3>ራዕይ</h3>
+
+          <ol>
+            <li>
+              የኳየሩ ዓላማ ጌታችን ኢየሱስ ክርስቶስ
+              እስከሚመጣበት ወይም እኛ እስከምንሄድበት
+              ቀን ድረስ በቅድስና በፊቱ መቆየት።
+            </li>
+
+            <li>
+              እግዚአብሔር የሚከብርበትና የሚደሰትበት
+              ህብረት ሆኖ መቆየት።
+            </li>
+
+            <li>
+              ኳየራችንን በሁሉም መንገድ ለሌሎች አርአያ
+              ማድረግ፣ እንዲሁም የሚያየን ሁሉ
+              በእኛ በኩል አልፎ የክርስቶስን መልክ
+              ማየት እንዲችል ማድረግ።
+            </li>
+          </ol>
+
+        </article>
+
+
+        <!-- MISSION -->
+        <article class="rule-block" id="rule-10">
+
+          <span class="rule-index">10</span>
+
+          <h3>ተልዕኮ</h3>
+
+          <ol>
+            <li>
+              አቅማችን በፈቀደው ልክና እግዚአብሔር
+              ባየልን መጠን የእርሱን መንግስት ማገልገል፣
+              አባላትን ማዘጋጀት።
+            </li>
+
+            <li>
+              የተቸገሩትን መረዳትና የታመሙትን መጠየቅ፥
+              ዘመድ ላጡት ዘመድ መሆን።
+            </li>
+
+            <li>
+              ከሁሉም ዋናው በዝማሬያችን ወንጌልን
+              ለዓለም ማሰራጨት ነው።
+            </li>
+          </ol>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================= CONTACT / ያግኙን ============================= -->
+<section id="contact" class="section contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <p class="eyebrow">ያግኙን</p>
+        <h2 class="section-title">እናግኝዎት</h2>
+        <p class="section-sub">ጥያቄ ወይም አስተያየት ካለዎት፣ ከዚህ በታች ባሉት መንገዶች ያግኙን።</p>
+
+        <ul class="contact-list">
+          <li>
+            <svg class="icon"><use href="#icon-pin"/></svg>
+            <span>ሀዋሳ ታቦር ቃለ ሕይወት ቤተክርስቲያን</span>
+          </li>
+<li>
+    <svg class="icon">
+        <use href="#icon-phone"></use>
+    </svg>
+
+    <span>
+        <p>
+            <a href="tel:+251982837887">+25198 283 7887</a>
+        </p>
+    </span>
+</li>
+<li>
+    <svg class="icon">
+        <use href="#icon-mail"></use>
+    </svg>
+
+    <span>
+        <a href="mailto:mehanayimqine@gmail.com">
+            mehanayimqine@gmail.com
+        </a>
+    </span>
+</li>
+        </ul>
+
+        <div class="social-links">
+          <a href="https://t.me/mehanaymkine" class="social-pill">ቴሌግራም</a>
+          <a href="https://www.tiktok.com/@mehanayimqinechoir1212?is_from_webapp=1&sender_device=pc" class="social-pill">ቲክ ቶክ</a>
+          <a href="mailto:mehanayimqine@gmail.com" class="social-pill">Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logos">
+        <img src="assets/photos/mehanayim-100.webp" alt="የመዘምራን ሎጎ" class="footer-logo">
+        <img src="assets/photos/mehanayim-101.webp" alt="የቤተክርስቲያን ሎጎ" class="footer-logo footer-church-logo" onerror="this.classList.add('img-fallback')">
+      </div>
+      <p class="footer-choir-name">መሃናይም ቅኔ መዘምራን</p>
+      <p class="footer-desc">ሀዋሳ ታቦር ቃለ ሕይወት ቤተክርስቲያን ስር የሚገኝ የመዝሙር አገልግሎት ቡድን — በዜማ የእግዚአብሔርን ስም እናከብራለን።</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>ማውጫ</h4>
+      <a href="#home">መነሻ</a>
+      <a href="#about">ስለ እኛ</a>
+      <a href="#songs">መዝሙር</a>
+      <a href="#gallery">ፎቶዎች</a>
+      <a href="#rules">ደንብ</a>
+      <a href="#contact">ያግኙን</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>መገናኛ</h4>
+      <p>ሀዋሳ ታቦር ቃለ ሕይወት ቤተክርስቲያን</p>
+      <p><a href="tel:+25198 283 7887">+25198 283 7887</a></p>
+      <p><a href="mailto:mehanayimqine@email.com">mehanayimqine@email.com</a></p>
+      <div class="social-links">
+        <a href="https://t.me/mehanaymkine" class="social-pill sm">ቴሌግራም</a>
+        <a href="https://www.tiktok.com/@mehanayimqinechoir1212?is_from_webapp=1&sender_device=pc" class="social-pill sm">Tiktok</a>
+        <a href="mailto:mehanayimqine@gmail.com" class="social-pill sm">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 መሃናይም ቅኔ መዘምራን — መብቱ የተጠበቀ።</p><br><a href="https://bantayew-portfolio.vercel.app/">Developed by Bantayew Beyene</a>
+  </div>
+</footer>
+
+<!-- ============================= LYRICS MODAL ============================= -->
+<div class="lyrics-modal" id="lyricsModal" aria-hidden="true">
+  <div class="lyrics-backdrop" id="lyricsBackdrop"></div>
+  <div class="lyrics-panel">
+    <div class="lyrics-panel-head">
+      <div>
+        <p class="lyrics-eyebrow">ግጥም</p>
+        <h3 id="lyricsTitle">የመዝሙር ስም</h3>
+      </div>
+      <button class="drawer-close" id="lyricsClose" aria-label="ዝጋ">
+        <svg class="icon"><use href="#icon-close"/></svg>
+      </button>
+    </div>
+    <div class="lyrics-toolbar">
+      <div class="font-size-controls">
+        <span>የፊደል መጠን</span>
+        <button id="fontDecrease" aria-label="ፊደል ያሳንሱ">A-</button>
+        <button id="fontIncrease" aria-label="ፊደል ያሳድጉ">A+</button>
+      </div>
+      <button class="copy-btn" id="copyLyricsBtn">
+        <svg class="icon icon-sm"><use href="#icon-copy"/></svg>
+        ግጥሙን ቅዳ
+      </button>
+    </div>
+    <div class="lyrics-body" id="lyricsBody"></div>
+  </div>
+</div>
+
+<!-- ============================= GALLERY LIGHTBOX ============================= -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="ዝጋ"><svg class="icon"><use href="#icon-close"/></svg></button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="ቀዳሚ"><svg class="icon" style="transform:rotate(180deg)"><use href="#icon-chevron"/></svg></button>
+  <img src="" alt="" class="lightbox-img" id="lightboxImg">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="ቀጣይ"><svg class="icon"><use href="#icon-chevron"/></svg></button>
+  <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+</div>
+
+<!-- ============================= FULL MUSIC PLAYER ============================= -->
+<div class="music-player" id="musicPlayer" aria-hidden="true">
+
+  <!-- Top bar -->
+  <div class="music-player-top">
+    <button
+      class="music-player-back"
+      id="musicPlayerBack"
+      aria-label="ዝጋ"
+    >
+      <svg class="icon">
+        <use href="#icon-chevron"></use>
+      </svg>
+    </button>
+
+    <span class="music-player-label">መዝሙር</span>
+
+  </div>
+
+
+  <!-- Album artwork -->
+  <div class="music-player-art-wrap">
+    <img
+      src=""
+      alt=""
+      class="music-player-art"
+      id="musicPlayerArt"
+    >
+  </div>
+
+
+  <!-- Song information -->
+  <div class="music-player-info">
+
+    <div class="music-player-title-row">
+
+      <div class="music-player-title-wrap">
+        <h2 id="musicPlayerTitle">—</h2>
+        <p id="musicPlayerArtist">መሃናይም ቅኔ</p>
+      </div>
+
+      <button
+        class="music-player-like"
+        id="musicPlayerLike"
+        aria-label="ወደ ተወዳጆች ጨምር"
+      >
+        ♡
+      </button>
+
+    </div>
+
+
+    <!-- Progress -->
+    <div class="music-player-progress-area">
+
+      <div
+        class="music-player-progress"
+        id="musicPlayerProgress"
+        role="slider"
+        aria-label="የመዝሙር እድገት"
+        tabindex="0"
+      >
+        <div
+          class="music-player-progress-fill"
+          id="musicPlayerProgressFill"
+        ></div>
+      </div>
+
+      <div class="music-player-time">
+        <span id="musicPlayerCurrentTime">0:00</span>
+        <span id="musicPlayerDuration">0:00</span>
+      </div>
+
+    </div>
+
+
+  <div class="music-player-controls">
+
+  <!-- Previous song -->
+  <button
+    class="music-player-control"
+    id="musicPlayerPrevious"
+    aria-label="ቀዳሚ መዝሙር"
+  >
+    <svg class="icon">
+      <use href="#icon-previous"></use>
+    </svg>
+  </button>
+
+
+  <!-- 10 seconds backward -->
+  <button
+    class="music-player-control music-player-skip"
+    id="musicPlayerBackward"
+    aria-label="10 ሰከንድ ወደኋላ"
+  >
+    <span>↶</span>
+    <small>10</small>
+  </button>
+
+
+  <!-- Play / Pause -->
+  <button
+    class="music-player-play"
+    id="musicPlayerPlay"
+    aria-label="አጫውት / አቁም"
+  >
+    <svg class="icon">
+      <use href="#icon-play"></use>
+    </svg>
+  </button>
+
+
+  <!-- 10 seconds forward -->
+  <button
+    class="music-player-control music-player-skip"
+    id="musicPlayerForward"
+    aria-label="10 ሰከንድ ወደፊት"
+  >
+    <span>↷</span>
+    <small>10</small>
+  </button>
+
+
+  <!-- Next song -->
+  <button
+    class="music-player-control"
+    id="musicPlayerNext"
+    aria-label="ቀጣይ መዝሙር"
+  >
+    <svg class="icon">
+      <use href="#icon-next"></use>
+    </svg>
+  </button>
+
+</div>
+
+
+    <!-- Secondary controls -->
+    <div class="music-player-secondary">
+
+      <button
+        class="music-player-secondary-btn"
+        id="musicPlayerLyrics"
+        aria-label="ግጥም"
+      >
+        <svg class="icon">
+          <use href="#icon-note"></use>
+        </svg>
+        <span>ግጥም</span>
+      </button>
+
+
+      <button
+        class="music-player-secondary-btn"
+        id="musicPlayerRepeat"
+        aria-label="ድገም"
+      >
+        <svg class="icon">
+          <use href="#icon-repeat"></use>
+        </svg>
+      </button>
+
+
+      <button
+        class="music-player-secondary-btn"
+        id="musicPlayerQueue"
+        aria-label="የመዝሙር ዝርዝር"
+      >
+        <svg class="icon">
+          <use href="#icon-list"></use>
+        </svg>
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Single shared audio element -->
+<audio id="mainAudio" preload="none"></audio>
+
+
+<!-- ============================= ADVANCED GALLERY VIEWER ============================= -->
+
+<div
+    class="gallery-viewer"
+    id="galleryViewer"
+    aria-hidden="true"
+>
+
+    <!-- TOP BAR -->
+    <div class="gallery-viewer-topbar">
+
+        <div class="gallery-viewer-heading">
+
+            <div
+                class="gallery-viewer-title"
+                id="galleryViewerTitle"
+            ></div>
+
+            <div
+                class="gallery-viewer-counter"
+                id="galleryViewerCounter"
+            >
+                1 / 1
+            </div>
+
+        </div>
+
+
+        <div class="gallery-viewer-top-actions">
+
+            <button
+                class="gallery-viewer-action"
+                id="galleryViewerClose"
+                type="button"
+                aria-label="Close"
+                title="Close"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN VIEWING AREA -->
+    <div
+        class="gallery-viewer-stage"
+        id="galleryViewerStage"
+    >
+
+        <!-- PREVIOUS -->
+        <button
+            id="galleryViewerPrev"
+            class="gallery-viewer-nav gallery-viewer-nav-prev"
+            type="button"
+            aria-label="Previous photo"
+        >
+            ‹
+        </button>
+
+
+        <!-- IMAGE AREA -->
+        <div
+            class="gallery-viewer-image-wrap"
+            id="galleryViewerImageWrap"
+        >
+
+            <!-- Loading indicator -->
+            <div
+                class="gallery-viewer-loading"
+                id="galleryViewerLoading"
+                aria-hidden="true"
+            >
+                <span></span>
+            </div>
+
+
+            <img
+                id="galleryViewerImage"
+                src=""
+                alt=""
+                draggable="false"
+            >
+
+        </div>
+
+
+        <!-- NEXT -->
+        <button
+            id="galleryViewerNext"
+            class="gallery-viewer-nav gallery-viewer-nav-next"
+            type="button"
+            aria-label="Next photo"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- BOTTOM AREA -->
+    <div class="gallery-viewer-bottom">
+
+
+        <!-- TOOLBAR -->
+        <div class="gallery-viewer-toolbar">
+
+            <!-- Zoom out -->
+            <button
+                class="gallery-viewer-tool"
+                id="galleryViewerZoomOut"
+                type="button"
+                aria-label="Zoom out"
+                title="Zoom out"
+            >
+                −
+            </button>
+
+
+            <!-- Zoom percentage -->
+            <button
+                class="gallery-viewer-tool gallery-viewer-zoom-level"
+                id="galleryViewerZoomReset"
+                type="button"
+                aria-label="Reset zoom"
+                title="Reset zoom"
+            >
+                100%
+            </button>
+
+
+            <!-- Zoom in -->
+            <button
+                class="gallery-viewer-tool"
+                id="galleryViewerZoomIn"
+                type="button"
+                aria-label="Zoom in"
+                title="Zoom in"
+            >
+                +
+            </button>
+
+
+            <span class="gallery-viewer-toolbar-divider"></span>
+
+
+            <!-- Rotate left -->
+            <button
+                class="gallery-viewer-tool"
+                id="galleryViewerRotateLeft"
+                type="button"
+                aria-label="Rotate left"
+                title="Rotate left"
+            >
+                ↶
+            </button>
+
+
+            <!-- Rotate right -->
+            <button
+                class="gallery-viewer-tool"
+                id="galleryViewerRotateRight"
+                type="button"
+                aria-label="Rotate right"
+                title="Rotate right"
+            >
+                ↷
+            </button>
+
+
+            <span class="gallery-viewer-toolbar-divider"></span>
+
+
+            <!-- Slideshow -->
+            <button
+                class="gallery-viewer-tool"
+                id="galleryViewerSlideshow"
+                type="button"
+                aria-label="Start slideshow"
+                title="Slideshow"
+            >
+                ▶
+            </button>
+
+
+            <!-- Reset -->
+            <button
+                class="gallery-viewer-tool"
+                id="galleryViewerReset"
+                type="button"
+                aria-label="Reset image"
+                title="Reset image"
+            >
+                ⟳
+            </button>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+        <div
+            class="gallery-viewer-thumbnails"
+            id="galleryViewerThumbnails"
+            aria-label="Photo thumbnails"
+        ></div>
+
+    </div>
+
+</div>
+
+<!-- ============================= EXIT CONFIRMATION ============================= -->
+
+<div class="exit-dialog" id="exitDialog" aria-hidden="true">
+
+    <div class="exit-dialog-backdrop"></div>
+
+    <div class="exit-dialog-box">
+
+        <h2>እርግጠኛ ኖት?</h2>
+
+        <p>መውጣት ይፈልጋሉ?</p>
+
+        <div class="exit-dialog-actions">
+
+            <button
+                class="exit-btn exit-btn-cancel"
+                id="exitCancel"
+            >
+                አይ
+            </button>
+
+            <button
+                class="exit-btn exit-btn-confirm"
+                id="exitConfirm"
+            >
+                አዎ
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
